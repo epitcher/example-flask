@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-
-<body>
-    <div class="container">
-        <h1>Upload File</h1>
-        <input type="file" id="fileInput" style="display:none">
-        <label for="fileInput" class="upload-btn">Upload your assets</label>
-    </div>
-</body>
-
-</html>
+{% block content %}
+<div class="container">
+    <h1>Upload File</h1>
+    <input type="file" id="fileInput" style="display:none">
+    <label for="fileInput" class="upload-btn">Upload your assets</label>
+</div>
+{% endblock %}
