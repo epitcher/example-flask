@@ -8,23 +8,23 @@
 </head>
 <body>
     <div class="sidebar">
-        <a href="{{ url_for('home') }}">Home</a>
-        <a href="{{ url_for('items') }}">Items</a>
-        <a href="{{ url_for('assets') }}">Assets</a>
+        <a href="{{ url_for('main.home') }}">Home</a>
+        <a href="{{ url_for('items.items') }}">Items</a>
+        <a href="{{ url_for('assets.assets') }}">Assets</a>
         <div class="dropdown">
             <button class="dropdown-btn">Individual Items</button>
             <div class="dropdown-content">
-                <a href="{{ url_for('item', item_id=1) }}">Item 1</a>
-                <a href="{{ url_for('item', item_id=2) }}">Item 2</a>
-                <a href="{{ url_for('item', item_id=3) }}">Item 3</a>
+                <a href="{{ url_for('items.item', item_id=1) }}">Item 1</a>
+                <a href="{{ url_for('items.item', item_id=2) }}">Item 2</a>
+                <a href="{{ url_for('items.item', item_id=3) }}">Item 3</a>
             </div>
         </div>
         <div class="dropdown">
             <button class="dropdown-btn">Individual Assets</button>
             <div class="dropdown-content">
-                <a href="{{ url_for('asset', asset_id=1) }}">Asset 1</a>
-                <a href="{{ url_for('asset', asset_id=2) }}">Asset 2</a>
-                <a href="{{ url_for('asset', asset_id=3) }}">Asset 3</a>
+                <a href="{{ url_for('assets.asset', asset_id=1) }}">Asset 1</a>
+                <a href="{{ url_for('assets.asset', asset_id=2) }}">Asset 2</a>
+                <a href="{{ url_for('assets.asset', asset_id=3) }}">Asset 3</a>
             </div>
         </div>
     </div>
