@@ -61,7 +61,7 @@ python -m pip install -r requirements.txt
 
 5. Run the application:
 ```
-python app.py
+python run.py
 ```
 
 
