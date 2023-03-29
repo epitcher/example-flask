@@ -1,6 +1,6 @@
 import os
 
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 import boto3
 from botocore.exceptions import ClientError
 from dotenv import load_dotenv
