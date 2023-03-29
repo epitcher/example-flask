@@ -3,7 +3,11 @@
 {% block content %}
 <div class="container">
     <h1>Upload File</h1>
-    <input type="file" id="fileInput" style="display:none">
-    <label for="fileInput" class="upload-btn">Upload your assets</label>
+    <form action="{{ url_for('assets.upload_file') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" style="display:none">
+        <label for="fileInput" class="upload-btn">Upload your assets</label>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
 </div>
 {% endblock %}
