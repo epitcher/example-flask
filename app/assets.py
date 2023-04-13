@@ -1,6 +1,6 @@
 import os
 
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 import boto3
 from botocore.exceptions import ClientError
 from dotenv import load_dotenv
@@ -29,7 +29,7 @@ def assets():
         {"id": 2, "name": "Asset 2"},
         {"id": 3, "name": "Asset 3"},
     ]
-    return jsonify(asset_list)
+    return render_template("items/index.html", json=asset_list)
 
 # Single asset route
 @assets_bp.route('/asset/<int:asset_id>')
@@ -41,7 +41,7 @@ def asset(asset_id):
     ]
     asset = next((a for a in assets if a["id"] == asset_id), None)
     if asset:
-        return jsonify(asset)
+        return "Asset "+ str(asset)
     else:
         return "Asset not found", 404
 
