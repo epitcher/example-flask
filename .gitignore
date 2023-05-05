@@ -56,3 +56,6 @@ production_config.py
 .pyright/
 .idea/
 *.iml
+
+
+.coverage

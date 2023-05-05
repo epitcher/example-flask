@@ -69,6 +69,12 @@ python run.py
 
 Open your web browser and navigate to `http://localhost:5000`. You should see the homepage with an "Upload file" button. Click the button to upload a file.
 
+## Helpful
+
+### Coverage
+- `python -m coverage run -m pytest && python -m coverage report`
+- `python -m coverage report`
+
 ## License
 
 This project is licensed under the MIT License. <!--- See the [LICENSE](LICENSE) file for details. -->
